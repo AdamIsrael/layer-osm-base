@@ -1,0 +1,21 @@
+#!/usr/bin/env python3
+# This script provides an entry point for invoking code in the reactive charm
+# when an `action` is executed by Juju.
+# Copy this file to a new file, named as the action you which to expose. For
+# example, to enable the `touch` action, `cp template touch`.
+import sys
+sys.path.append('lib')
+
+from charms.reactive import main, set_flag
+from charmhelpers.core.hookenv import action_fail, action_name
+
+"""
+`set_state` only works here because it's flushed to disk inside the `main()`
+loop. remove_state will need to be called inside the action method.
+"""
+set_flag('actions.{}'.format(action_name()))
+
+try:
+    main()
+except Exception as e:
+    action_fail(repr(e))

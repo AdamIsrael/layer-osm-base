@@ -1,0 +1,12 @@
+name: osm-base
+summary: The base layer for OSM charms.
+maintainer: Adam Israel <adam.israel@canonical.com>
+description: |
+  The osm-base layer is used to build charms compatible with Open Source Mano (OSM). See https://osm.etsi.org/ for more information.
+tags:
+  - nfv
+  - vnf
+  - osm
+subordinate: false
+series:
+    - xenial

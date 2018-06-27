@@ -1,0 +1,25 @@
+includes:
+    - 'layer:basic'     # The base reactive layer
+    - 'layer:osm-base'  # The base OSM layer
+
+
+    # Proxy Charms only 
+    # Proxy charms are a distinct class of charm where the charm runs
+    # independent of the application. This type of charm is useful when
+    # the application is a physical device, such as a switch, or a
+    # virtualized appliance.
+
+    # If this is a proxy charm, uncomment the next line.
+    # - 'layer:osm-proxy'
+
+    # Enable the method you'll use to
+    # - 'layer:osm-proxy-sol002'
+    # - 'layer:osm-proxy-ssh'
+    # - 'layer:osm-proxy-ansible'
+
+
+options:
+    # Turn off the use of virtualenv for the charms dependencies. This is
+    # required for actions to invoke the reactive framework
+    basic:
+        use_venv: false

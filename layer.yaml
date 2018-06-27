@@ -1,0 +1,8 @@
+includes:
+    - 'layer:basic'     # The base reactive layer
+
+options:
+    # Turn off the use of virtualenv for the charms dependencies. This is
+    # required for actions to invoke the reactive framework
+    basic:
+        use_venv: false

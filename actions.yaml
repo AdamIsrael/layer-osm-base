@@ -1,0 +1,10 @@
+start:
+    description: "Start the VNF service."
+stop:
+    description: "Stop the VNF service."
+restart:
+    description: "Restart the VNF service."
+reboot:
+    description: "Reboot the VNF."
+upgrade:
+    description: "Upgrade the VNF software."
